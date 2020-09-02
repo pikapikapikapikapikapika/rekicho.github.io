@@ -1,18 +1,18 @@
 window.onload = () => {
     document.querySelectorAll("#fruits > .row > div")
-        .forEach((square) => square.addEventListener("mousedown", chooseFruit));
+        .forEach((square) => square.addEventListener("mousedown", chooseFruit, false));
     document.querySelectorAll("#fruits > .row > div")
-        .forEach((square) => square.addEventListener("touchstart", chooseFruit));
+        .forEach((square) => square.addEventListener("touchstart", chooseFruit, false));
 
-    document.querySelector("body").addEventListener("mousemove", moveFruitOnMouse)
-    document.querySelector("body").addEventListener("touchmove", moveFruitOnMouse)
+    document.querySelector("body").addEventListener("mousemove", moveFruitOnMouse, false)
+    document.querySelector("body").addEventListener("touchmove", moveFruitOnMouse, false)
 
     document.querySelectorAll("#squares > .row > div")
-        .forEach((square) => square.addEventListener("mouseup", selectSquare));
+        .forEach((square) => square.addEventListener("mouseup", selectSquare, false));
     document.querySelectorAll("#squares > .row > div")
-        .forEach((square) => square.addEventListener("touchend", selectSquare));
+        .forEach((square) => square.addEventListener("touchend", selectSquare, false));
     document.querySelectorAll("#squares > .row > div")
-        .forEach((square) => square.addEventListener("touchcancel", selectSquare));
+        .forEach((square) => square.addEventListener("touchcancel", selectSquare, false));
 
     document.querySelector("button").addEventListener("click", resetFruits);
 };
