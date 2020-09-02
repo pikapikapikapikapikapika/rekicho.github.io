@@ -2,10 +2,16 @@ window.onload = () => {
     document.querySelectorAll("#fruits > .row > div")
         .forEach((square) => square.addEventListener("mousedown", chooseFruit));
 
+    document.querySelectorAll("#fruits > .row > div")
+        .forEach((square) => square.addEventListener("touchstart", chooseFruit));
+
     document.querySelector("body").addEventListener("mousemove", moveFruitOnMouse)
 
     document.querySelectorAll("#squares > .row > div")
         .forEach((square) => square.addEventListener("mouseup", selectSquare));
+
+    document.querySelectorAll("#squares > .row > div")
+        .forEach((square) => square.addEventListener("touchend touchcancel", selectSquare));
 
     document.querySelector("button").addEventListener("click", resetFruits);
 };
